@@ -5,11 +5,9 @@ class Solution:
         heapq.heapify(stones)
 
         while len(stones) > 1:
-            print(stones)
             one, two = -1 * heapq.heappop(stones), -1 * heapq.heappop(stones)
             diff = one - two
             if diff:
                 heapq.heappush(stones, -1 * diff)
-            print(stones)
         
         return -1 * stones[-1] if len(stones) else 0
