@@ -7,10 +7,10 @@
 class Solution:
     def __init__(self):
         self.cnt = 0
-        self.check = {}
 
     def pathSum(self, root: Optional[TreeNode], hh: int) -> int:
         
+
         def rec(node,start, s):
             if not node:
                 return
