@@ -9,5 +9,5 @@ class Solution:
 
             res = rec(n-1) + rec(n-2)
             return res
-
+        
         return rec(n)
