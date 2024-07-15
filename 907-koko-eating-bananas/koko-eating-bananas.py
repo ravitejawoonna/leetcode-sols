@@ -8,7 +8,7 @@ class Solution:
         
 
         r = max(piles)
-        l = 1
+        l=1
 
         while l < r:
             m = l + (r-l) // 2
