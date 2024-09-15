@@ -7,6 +7,7 @@ class Solution:
             if i == m-1 and j == n-1:
                 return 1
             
-            return rec(i+1,j) + rec(i,j+1)
+            res = rec(i+1,j) + rec(i,j+1)
+            return res
         return rec(0,0)
         
