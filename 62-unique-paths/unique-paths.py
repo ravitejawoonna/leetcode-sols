@@ -12,6 +12,7 @@ class Solution:
         #     return res
         # return rec(0,0)
 
+        # top down
         dp = [
             [0 for _ in range(n)] for _ in range(m)
         ]
