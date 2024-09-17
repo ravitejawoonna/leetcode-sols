@@ -15,7 +15,6 @@ class Solution:
                 return True
             
             visited.add(c)
-            print(c)
 
             for p in adj[c]:
                 if not rec(p): return False
