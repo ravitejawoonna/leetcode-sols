@@ -8,7 +8,6 @@ class Solution:
             adj[d[0]].append(d[1])        
         
         visited = set()
-        print(adj)
         def rec(c):
             if c in visited:
                 return False
