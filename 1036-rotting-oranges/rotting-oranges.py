@@ -11,6 +11,7 @@ class Solution:
                 elif grid[i][j] == 2:
                     rotten.append((i,j))
         
+        if len(fresh) == 0: return 0
 
         def rotIdx(i,j):
             if (
