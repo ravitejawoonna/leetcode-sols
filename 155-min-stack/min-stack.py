@@ -18,8 +18,6 @@ class MinStack:
     def pop(self) -> None:
         self.stack.pop()
         self.min_stack.pop()
-        print(self.stack)
-        print(self.min_stack)
 
     def top(self) -> int:
         return self.stack[-1]
