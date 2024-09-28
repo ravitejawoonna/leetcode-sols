@@ -7,19 +7,17 @@
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         
-        q = [root]
-
-        while q:
-            nq = []
-            s = []
-            for item in q:
-                if not item:
-                    s = s + ["*"]
-                    continue
-                s = s + [str(item.val)]
-                nq.append(item.left)
-                nq.append(item.right)
-            if s != s[::-1]:
+        def rec(p,q):
+            if not p and not q:
+                return True
+            
+            if not q or not p:
                 return False
-            q = nq
-        return True
+            
+            if q.val != p.val:
+                return False
+            
+            return rec(p.left, q.right) and rec(p.right, q.left)
+        return rec(
+            root.left, root.right
+        )
