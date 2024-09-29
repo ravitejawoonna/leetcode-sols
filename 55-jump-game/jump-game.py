@@ -1,10 +1,10 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        gasleft = 0
+        gasleft = nums[0] -1
 
-        for i in range(0, len(nums)):
+        for i in range(1, len(nums)):
             if gasleft < 0:
                 return False
-            gasleft = max(nums[i], gasleft)
+            gasleft = max(gasleft, nums[i])
             gasleft -= 1
         return True
