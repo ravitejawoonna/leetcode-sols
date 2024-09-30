@@ -4,12 +4,12 @@ class Solution:
         r = len(nums)
 
         while l < r:
-            m = l + (r-l)//2
+            m = (l+r)//2
+
             if nums[m] >= target:
-                if nums[m] == target:
+                if target == nums[m]:
                     return m
                 r = m
             else:
-                l = m+1
-        
+                l = m + 1
         return l
