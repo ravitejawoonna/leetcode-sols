@@ -2,9 +2,9 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         cache = {}
 
-        for i in range(0, len(nums)):
+        for i in range(len(nums)):
             diff = target - nums[i]
             if diff in cache:
-                return [i, cache[diff]]
-            else:
-                cache[nums[i]] = i
+                return [cache[diff], i]
+            cache[nums[i]] = i
+        
