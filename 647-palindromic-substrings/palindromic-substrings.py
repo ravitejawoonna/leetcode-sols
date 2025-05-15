@@ -1,6 +1,6 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
-        res = []
+        count = 0
 
         for i in range(0, len(s)):
             l = i
@@ -8,7 +8,7 @@ class Solution:
 
             while l >= 0 and r < len(s) and s[l] == s[r]:
                 #if s[l:r+1] not in res:
-                res.append(s[l:r+1])
+                count += 1
                 l -= 1
                 r += 1
             
@@ -17,8 +17,8 @@ class Solution:
 
             while l >= 0 and r < len(s) and s[l] == s[r]:
                 #if s[l:r+1] not in res:
-                res.append(s[l:r+1])
+                count += 1
                 r += 1
                 l -= 1
         
-        return len(res)
+        return count
